@@ -3,7 +3,7 @@ document.getElementById("background").style.display = "block";
 
 
 function myFunction() {
-     // DISCORD USERNAME ---- UPDATE WHEN NITRO EXPIRES!!!
+     //the text that is to be copied to the clipboard
      var theText = 'Chaboi_3000#6969';
  
      //create our hidden div element
