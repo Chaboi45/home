@@ -64,9 +64,12 @@ function myFunction() {
 } 
 
 var myVar;
-
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
 function onLoad() {
-  myVar = setTimeout(showPage, 3000);
+  var loadTime = getRndInteger(2000, 5000);
+  myVar = setTimeout(showPage, loadTime);
 }
 
 function showPage() {
