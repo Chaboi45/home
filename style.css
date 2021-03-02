@@ -1,4 +1,6 @@
-
+     * {
+   cursor: none;
+     }
 .container {
   position: relative;
   width: 100%;
@@ -157,7 +159,6 @@ input[type="button"] {
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid #bbb;
-  cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
 button:hover,
@@ -413,8 +414,9 @@ hr {
   src: url('Abel-Regular.ttf'); 
 }
 .container {
+    cursor: none;
     text-decoration: none;
-    z-index: 100000;
+    z-index: 2;
     margin-top: 120px;
     margin-left: auto;
     margin-right: auto;
@@ -573,7 +575,6 @@ body {
         width: 1.5rem;
         line-height: 1.5rem;
         text-align: center;
-        cursor: pointer;
         border-radius: 0.25rem;
         background-color: lightgray;
     }
@@ -598,3 +599,67 @@ body {
     background-color: black;
     display: none;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  height: 100vh;
+  cursor: none;
+}
+
+.main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 65px;
+}
+
+.cursor{
+  z-index: 999;
+  position: fixed;
+  background: #2696E8;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px #2696E8,
+              0 0 60px #2696E8,
+              0 0 100px #2696E8;
+  animation: colors 5s infinite;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@keyframes colors{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+.cursor:before{
+  content: '';
+  position: absolute;
+  background: #2696E8;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
+      
