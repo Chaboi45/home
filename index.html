@@ -8,19 +8,22 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   
+
   <body onload="onLoad()">
 
 
 
 
 
-
+    
     <div class = "loading-body" id = "background">
+      
       <div class="loading" id = "loader">
         <div class="outer-ring center"></div>
         <div class="inner-ring center"></div>
       </div>
     </div>
+    <div class="cursor"></div>
     <div id = "page" style="display:none;">
       
 
@@ -78,6 +81,7 @@
           </div>
         </div>
       <div class="alert-box success">Copied to clipboard!</div>
+      
       </div>
 
     </div>
@@ -86,10 +90,38 @@
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     </script>
+    <script type="text/javascript">
+          const cursor = document.querySelector(".cursor");
+    var timeout;
+
+    //follow cursor on mousemove
+    document.addEventListener("mousemove", (e) => {
+      let x = e.pageX;
+      let y = e.pageY;
+
+      cursor.style.top = y + "px";
+      cursor.style.left = x + "px";
+      cursor.style.display = "block";
+
+      //cursor effects when mouse stopped
+      function mouseStopped(){
+        cursor.style.display = "none";
+      }
+      clearTimeout(timeout);
+      timeout = setTimeout(mouseStopped, 1000);
+    });
+
+    //cursor effects when mouseout
+    document.addEventListener("mouseout", () => {
+      cursor.style.display = "none";
+    });
+    </script>
+
     <script>
       $( "#success-btn" ).click(function() {
       $( "div.success" ).fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
     });
     </script>
+    
   </body>
 </html>
