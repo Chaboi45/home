@@ -48,7 +48,7 @@ function myFunction() {
      }
      catch(err)
      {
-          console.log("Your Browser Doesn't support this! Error : " + err);
+          console.log("err");
      }
      //remove the selection range (Chrome throws a warning if we don't.)
      window.getSelection().removeRange(CopyRange);
