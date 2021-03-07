@@ -4,7 +4,7 @@ document.getElementById("background").style.display = "block";
 
 function myFunction() {
      // DISCORD USERNAME ---- UPDATE WHEN NITRO EXPIRES!!!
-     var theText = 'Chaboi_3000#6969';
+     var theText = 'Chaboi_3000#8546';
  
      //create our hidden div element
      var hiddenCopy = document.createElement('div');
