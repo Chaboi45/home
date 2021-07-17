@@ -4,7 +4,7 @@ document.getElementById("background").style.display = "block";
 
 function myFunction() {
      // DISCORD USERNAME ---- UPDATE WHEN NITRO EXPIRES!!!
-     var theText = 'Chaboi_3000#8546';
+     var theText = 'Chaboi_3000#1337';
  
      //create our hidden div element
      var hiddenCopy = document.createElement('div');
@@ -68,7 +68,7 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 function onLoad() {
-  var loadTime = getRndInteger(2000, 5000);
+  var loadTime = getRndInteger(100, 500);
   myVar = setTimeout(showPage, loadTime);
 }
 
